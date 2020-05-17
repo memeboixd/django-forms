@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}" />
+    <title>Courseera</title>
+</head>
+<body>
+
+<div class="content">
+<h1 id="title">Join your course today!</h1>
+
+<h2 class="title2">With our top level specialists you'll master your skills in no time</h2>
+
+</div>
+
+
+<p class="text">List of people who recently enrolled:</p>
+</div>
+
+<div class="enroled">
+{% if objects %}
+{% for o in objects %}
+    <li class="item">{{ o.name }}</li>
+
+{% endfor %}
+{% endif %}
+
+</div>
+<div class="fotr">
+<p class="text">click this link to join free course!!!: </p>
+<a  id="url" href="{% url 'form' %}">free course</a>
+</div>
+
+
+
+
+</body>
+</html>

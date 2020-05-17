@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}" />
+    <title>Please fill out the form</title>
+</head>
+<body>
+
+    <h1 id="title3">Please provide contact info</h1>
+
+    <form action="{% url 'form' %}" method="post" id="content">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="Submit" value="Enroll">
+    <input type="reset" name="Reset" value="Reset">
+</form>
+
+
+
+
+
+</body>
+</html>
